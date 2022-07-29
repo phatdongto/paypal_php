@@ -22,7 +22,8 @@ if (array_key_exists('paymentId', $_GET) && array_key_exists('PayerID', $_GET)) 
         $payment_status = $arr_body['state'];
  
         // $db->query("INSERT INTO payments(payment_id, payer_id, payer_email, amount, currency, payment_status) VALUES('". $payment_id ."', '". $payer_id ."', '". $payer_email ."', '". $amount ."', '". $currency ."', '". $payment_status ."')");
- 
+            
+        show($arr_body);
         echo "Payment is successful. Your transaction id is: ". $payment_id;
     } else {
         echo $response->getMessage();
